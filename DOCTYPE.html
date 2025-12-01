@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Grow - Talent Liberation Service</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        /* Custom selection color to match React version */
+        ::selection {
+            background-color: #a855f7; /* purple-500 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <h1 class="text-xl tracking-[0.2em] font-light text-slate-900">
+                Beauty Grow
+            </h1>
+        </div>
+    </header>
+
+    <!-- First View (FV) -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Abstract Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2940&auto=format&fit=crop" 
+                alt="Abstract Purple Light" 
+                class="w-full h-full object-cover opacity-30"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/20"></div>
+        </div>
+
+        <div id="hero-content" class="relative z-10 max-w-4xl px-6 text-center transition-all duration-1000 transform translate-y-10 opacity-0">
+            <p class="text-purple-600 tracking-widest text-sm md:text-base mb-6 uppercase font-medium">
+                Talent Liberation Service
+            </p>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-slate-900">
+                隠れた<span class="text-purple-600">才能</span>を照らし、<br />
+                最高の<span class="text-purple-600">ステージ</span>へ導く。
+            </h2>
+            <p class="text-slate-600 text-sm md:text-lg tracking-wide font-light">
+                美容師専門タレント・リベレーションサービス <br class="md:hidden"/> Beauty Grow
+            </p>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Section 1: Concept -->
+    <section class="py-24 px-6 bg-white relative">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="block text-purple-600 text-sm tracking-widest mb-4">CONCEPT</span>
+            <h3 class="text-2xl md:text-3xl font-serif mb-12 text-slate-800">タレント・リベレーションとは？</h3>
+            <p class="text-slate-700 leading-loose text-base md:text-lg text-justify md:text-center font-medium">
+                今の職場にどこか「モヤモヤ」を抱え、本来の価値を発揮しきれていない。<br /><br />
+                そんな美容師様のくすぶっている<span class="text-purple-800 font-bold">「才能（Talent）」</span>を、<br />
+                心から満たされる環境へ導き<span class="text-purple-800 font-bold">「解放（Liberation）」</span>すること。<br /><br />
+                それが私たちの提唱する、新しいキャリア支援の形です。
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 2: Why You? -->
+    <section class="py-24 px-6 bg-slate-50 relative border-t border-slate-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 relative">
+                    <!-- Decorative Graphics -->
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-200 rounded-full blur-3xl opacity-50"></div>
+                    <div class="relative bg-white p-8 rounded-2xl border border-slate-200 shadow-xl shadow-purple-100/50">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-purple-50 rounded-lg">
+                                <i data-lucide="search" class="text-purple-600 w-8 h-8"></i>
+                            </div>
+                            <div class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-500">Data Analysis</div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-2 w-3/4 bg-slate-100 rounded"></div>
+                            <div class="h-2 w-full bg-slate-100 rounded"></div>
+                            <div class="h-2 w-5/6 bg-slate-100 rounded"></div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <p class="text-sm text-purple-600 flex items-center gap-2 font-medium">
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                                High Potential Identified
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-snug text-slate-800">
+                        オファーの仕組み
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        私たちは、サロン様がご指定頂いた”理想の求人像”をもとに、世の中の公開情報（SNSやインターネット上の情報）を独自にリサーチしております。
+                    </p>
+                    <p class="text-slate-800 text-lg font-medium leading-relaxed border-l-4 border-purple-500 pl-4 bg-purple-50/50 py-2 pr-2">
+                        その分析の結果、サロン様が求める人物像と合致し、「現在の環境以上に、市場で高く評価されるべき才能」をお持ちであると判断した方にのみ、お電話にてコンタクトを取らせていただいております。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: 3 Merits -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-2xl md:text-4xl font-bold mb-4 text-slate-800">Beauty Grow 3つの約束</h3>
+                <div class="w-16 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Merit 1 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:border-purple-200 hover:shadow-purple-100 transition-all duration-300 group">
+                    <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
+                        <i data-lucide="star" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">非公開の<br/>「プレミアムオファー」</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        一般的な求人サイトには掲載されていない、希少な非公開求人を中心にご案内します。限られた方にのみ届くオファーとなっております。
+                    </p>
+                </div>
+
+                <!-- Merit 2 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:border-purple-200 hover:shadow-purple-100 transition-all duration-300 group">
+                    <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">「好待遇サロン」<br/>限定のご紹介</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        ご紹介するのは、弊社独自の厳しい審査基準をクリアした「好待遇サロン」のみです。給与、休日、労働環境など、プロの目線で厳選した優良サロンとだけ契約を結んでいます。
+                    </p>
+                </div>
+
+                <!-- Merit 3 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:border-purple-200 hover:shadow-purple-100 transition-all duration-300 group">
+                    <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
+                        <i data-lucide="lock" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">完全無料<br/>秘密厳守</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        サービス利用料は一切かかりません。また、現在所属されているサロン様に活動が知られることはありませんので、安心して情報収集が可能です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Flow -->
+    <section class="py-24 px-6 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+        <!-- Background glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-100 rounded-full blur-[100px] opacity-60"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-center text-slate-800">サービスご利用のステップ</h3>
+
+            <div class="space-y-4">
+                <!-- Step 1 -->
+                <div class="flex gap-6 opacity-60">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold border border-slate-300 text-slate-500">01</div>
+                        <div class="flex-1 w-px bg-slate-300 my-2"></div>
+                    </div>
+                    <div class="pb-10 pt-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h4 class="text-lg font-bold text-slate-700">スカウト連絡（昼）</h4>
+                            <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">完了</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">専任コンサルタントより、ファーストコンタクトを差し上げます。</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 (Active) -->
+                <div class="flex gap-6 relative">
+                    <div class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-transparent rounded-l md:hidden"></div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold shadow-lg shadow-purple-200 z-10">02</div>
+                        <div class="flex-1 w-px bg-slate-300 my-2"></div>
+                    </div>
+                    <div class="pb-12 pt-2 flex-1">
+                        <div class="bg-white p-6 rounded-xl border border-purple-200 shadow-xl shadow-purple-100/50 relative">
+                            <div class="flex items-center gap-3 mb-3">
+                                <h4 class="text-xl font-bold text-purple-800">詳細のご案内（夜）</h4>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full animate-pulse border border-purple-200">NOW</span>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">
+                                ご都合の良い時間に改めてお電話し、オファー内容の詳細や、具体的なサロン情報をお伝えします。
+                            </p>
+                            <div class="mt-4 flex items-center gap-2 text-purple-600 text-sm font-medium">
+                                <i data-lucide="phone" class="w-4 h-4"></i>
+                                <span>お電話をお待ちください</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-white border border-slate-300 flex items-center justify-center font-bold text-slate-400">03</div>
+                        <div class="flex-1 w-px bg-slate-300 my-2"></div>
+                    </div>
+                    <div class="pb-10 pt-2 flex-1">
+                        <h4 class="text-lg font-bold mb-2 text-slate-700">カジュアル面談</h4>
+                        <p class="text-slate-500 text-sm mb-4">
+                            興味を持たれた場合のみ、サロン担当者とお話しいただきます。
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-400 mb-2">選べる3つのスタイル</p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <i data-lucide="video" class="w-4 h-4 text-purple-500"></i> オンライン面談
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <i data-lucide="coffee" class="w-4 h-4 text-purple-500"></i> カフェ・ファミレス
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-slate-600">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-purple-500"></i> サロン見学
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 rounded-full bg-white border border-slate-300 flex items-center justify-center font-bold text-slate-400">04</div>
+                    </div>
+                    <div class="pt-2">
+                        <h4 class="text-lg font-bold mb-2 text-slate-700">オファー承諾・入社</h4>
+                        <p class="text-slate-500 text-sm">双方が合意した場合、新たなステージでのキャリアがスタートします。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                 <div class="inline-block bg-slate-50 border-2 border-slate-200 p-6 rounded-xl shadow-sm">
+                    <p class="text-base font-bold text-purple-700">※無理な勧誘は一切行いません。あくまで「選択肢の一つ」としてご検討ください。</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-2xl tracking-[0.2em] font-light text-white mb-8">
+                Beauty Grow
+            </h2>
+            <div class="text-slate-400 text-sm space-y-2">
+                <p>運営: Beauty Grow 運営事務局</p>
+                <p>&copy; Beauty Grow All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Hero Animation Logic
+        window.addEventListener('load', () => {
+            const heroContent = document.getElementById('hero-content');
+            setTimeout(() => {
+                heroContent.classList.remove('translate-y-10', 'opacity-0');
+                heroContent.classList.add('translate-y-0', 'opacity-100');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
