@@ -21,10 +21,14 @@
         .font-serif {
             font-family: 'Noto Serif JP', serif;
         }
-        /* Custom selection color to match React version */
+        /* Custom selection color */
         ::selection {
             background-color: #a855f7; /* purple-500 */
             color: white;
+        }
+        /* スマホでの改行を美しくするためのクラス（単語の途中で改行させない） */
+        .word-keep {
+            display: inline-block;
         }
     </style>
 </head>
@@ -41,7 +45,7 @@
 
     <!-- First View (FV) -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Abstract Background Image with Overlay -->
+        <!-- Abstract Background Image -->
         <div class="absolute inset-0 z-0">
             <img 
                 src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2940&auto=format&fit=crop" 
@@ -56,12 +60,13 @@
             <p class="text-purple-600 tracking-widest text-sm md:text-base mb-6 uppercase font-medium">
                 Talent Liberation Service
             </p>
-            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-slate-900">
-                隠れた<span class="text-purple-600">才能</span>を照らし、<br />
-                最高の<span class="text-purple-600">ステージ</span>へ導く。
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-slate-900">
+                <span class="word-keep">隠れた<span class="text-purple-600">才能</span>を照らし、</span><br class="hidden md:block"/>
+                <span class="word-keep">最高の<span class="text-purple-600">ステージ</span>へ導く。</span>
             </h2>
-            <p class="text-slate-600 text-sm md:text-lg tracking-wide font-light">
-                美容師専門タレント・リベレーションサービス <br class="md:hidden"/> Beauty Grow
+            <p class="text-slate-600 text-sm md:text-lg tracking-wide font-light leading-relaxed">
+                <span class="word-keep">美容師専門タレント・</span><span class="word-keep">リベレーションサービス</span><br class="hidden md:block"/> 
+                <span class="word-keep">Beauty Grow</span>
             </p>
         </div>
 
@@ -74,12 +79,15 @@
     <section class="py-24 px-6 bg-white relative">
         <div class="max-w-3xl mx-auto text-center">
             <span class="block text-purple-600 text-sm tracking-widest mb-4">CONCEPT</span>
-            <h3 class="text-2xl md:text-3xl font-serif mb-12 text-slate-800">タレント・リベレーションとは？</h3>
-            <p class="text-slate-700 leading-loose text-base md:text-lg text-justify md:text-center font-medium">
-                今の職場にどこか「モヤモヤ」を抱え、本来の価値を発揮しきれていない。<br /><br />
-                そんな美容師様のくすぶっている<span class="text-purple-800 font-bold">「才能（Talent）」</span>を、<br />
-                心から満たされる環境へ導き<span class="text-purple-800 font-bold">「解放（Liberation）」</span>すること。<br /><br />
-                それが私たちの提唱する、新しいキャリア支援の形です。
+            <h3 class="text-2xl md:text-3xl font-serif mb-12 text-slate-800">
+                <span class="word-keep">タレント・</span><span class="word-keep">リベレーションとは？</span>
+            </h3>
+            <p class="text-slate-700 leading-loose text-base md:text-lg text-left md:text-center font-medium">
+                <span class="word-keep">今の職場にどこか</span><span class="word-keep">「モヤモヤ」を抱え、</span><br class="hidden md:block"/>
+                <span class="word-keep">本来の価値を</span><span class="word-keep">発揮しきれていない。</span><br /><br />
+                <span class="word-keep">そんな美容師様の</span><span class="word-keep">くすぶっている</span><span class="word-keep text-purple-800 font-bold">「才能（Talent）」</span>を、<br class="hidden md:block"/>
+                <span class="word-keep">心から満たされる</span><span class="word-keep">環境へ導き</span><span class="word-keep text-purple-800 font-bold">「解放（Liberation）」</span>すること。<br /><br />
+                <span class="word-keep">それが私たちの提唱する、</span><span class="word-keep">新しいキャリア支援の形です。</span>
             </p>
         </div>
     </section>
@@ -114,13 +122,13 @@
                 
                 <div class="w-full md:w-1/2">
                     <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-snug text-slate-800">
-                        オファーの仕組み
+                        <span class="word-keep">オファーの</span><span class="word-keep">仕組み</span>
                     </h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        私たちは、サロン様がご指定頂いた”理想の求人像”をもとに、世の中の公開情報（SNSやインターネット上の情報）を独自にリサーチしております。
+                        <span class="word-keep">私たちは、</span><span class="word-keep">サロン様がご指定頂いた</span><span class="word-keep">”理想の求人像”をもとに、</span><span class="word-keep">世の中の公開情報</span><span class="word-keep">（SNSやインターネット上の情報）を</span><span class="word-keep">独自にリサーチしております。</span>
                     </p>
                     <p class="text-slate-800 text-lg font-medium leading-relaxed border-l-4 border-purple-500 pl-4 bg-purple-50/50 py-2 pr-2">
-                        その分析の結果、サロン様が求める人物像と合致し、「現在の環境以上に、市場で高く評価されるべき才能」をお持ちであると判断した方にのみ、お電話にてコンタクトを取らせていただいております。
+                        <span class="word-keep">その分析の結果、</span><span class="word-keep">サロン様が求める人物像と合致し、</span><span class="word-keep">「現在の環境以上に、</span><span class="word-keep">市場で高く評価されるべき才能」</span><span class="word-keep">をお持ちであると判断した方にのみ、</span><span class="word-keep">お電話にてコンタクトを</span><span class="word-keep">取らせていただいております。</span>
                     </p>
                 </div>
             </div>
@@ -131,7 +139,9 @@
     <section class="py-24 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h3 class="text-2xl md:text-4xl font-bold mb-4 text-slate-800">Beauty Grow 3つの約束</h3>
+                <h3 class="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
+                    <span class="word-keep">Beauty Grow</span> <span class="word-keep">3つの約束</span>
+                </h3>
                 <div class="w-16 h-1 bg-purple-500 mx-auto"></div>
             </div>
 
@@ -141,9 +151,12 @@
                     <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
                         <i data-lucide="star" class="w-8 h-8 text-purple-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800">非公開の<br/>「プレミアムオファー」</h4>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">
+                        <span class="word-keep">非公開の</span><br/>
+                        <span class="word-keep">「プレミアムオファー」</span>
+                    </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        一般的な求人サイトには掲載されていない、希少な非公開求人を中心にご案内します。限られた方にのみ届くオファーとなっております。
+                        <span class="word-keep">一般的な求人サイトには掲載されていない、</span><span class="word-keep">希少な非公開求人を中心にご案内します。</span><span class="word-keep">限られた方にのみ届く</span><span class="word-keep">オファーとなっております。</span>
                     </p>
                 </div>
 
@@ -152,9 +165,12 @@
                     <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
                         <i data-lucide="shield-check" class="w-8 h-8 text-purple-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800">「好待遇サロン」<br/>限定のご紹介</h4>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">
+                        <span class="word-keep">「好待遇サロン」</span><br/>
+                        <span class="word-keep">限定のご紹介</span>
+                    </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        ご紹介するのは、弊社独自の厳しい審査基準をクリアした「好待遇サロン」のみです。給与、休日、労働環境など、プロの目線で厳選した優良サロンとだけ契約を結んでいます。
+                        <span class="word-keep">ご紹介するのは、</span><span class="word-keep">弊社独自の厳しい審査基準をクリアした</span><span class="word-keep">「好待遇サロン」のみです。</span><span class="word-keep">給与、休日、労働環境など、</span><span class="word-keep">プロの目線で厳選した</span><span class="word-keep">優良サロンとだけ</span><span class="word-keep">契約を結んでいます。</span>
                     </p>
                 </div>
 
@@ -163,9 +179,12 @@
                     <div class="mb-6 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-purple-50 transition-colors">
                         <i data-lucide="lock" class="w-8 h-8 text-purple-600"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800">完全無料<br/>秘密厳守</h4>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">
+                        <span class="word-keep">完全無料</span><br/>
+                        <span class="word-keep">秘密厳守</span>
+                    </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        サービス利用料は一切かかりません。また、現在所属されているサロン様に活動が知られることはありませんので、安心して情報収集が可能です。
+                        <span class="word-keep">サービス利用料は一切かかりません。</span><span class="word-keep">また、現在所属されている</span><span class="word-keep">サロン様に活動が知られることは</span><span class="word-keep">ありませんので、</span><span class="word-keep">安心して情報収集が可能です。</span>
                     </p>
                 </div>
             </div>
@@ -178,7 +197,9 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-100 rounded-full blur-[100px] opacity-60"></div>
 
         <div class="max-w-4xl mx-auto relative z-10">
-            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-center text-slate-800">サービスご利用のステップ</h3>
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-center text-slate-800">
+                <span class="word-keep">サービスご利用の</span><span class="word-keep">ステップ</span>
+            </h3>
 
             <div class="space-y-4">
                 <!-- Step 1 -->
@@ -192,7 +213,9 @@
                             <h4 class="text-lg font-bold text-slate-700">スカウト連絡（昼）</h4>
                             <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">完了</span>
                         </div>
-                        <p class="text-slate-500 text-sm">専任コンサルタントより、ファーストコンタクトを差し上げます。</p>
+                        <p class="text-slate-500 text-sm">
+                            <span class="word-keep">専任コンサルタントより、</span><span class="word-keep">ファーストコンタクトを</span><span class="word-keep">差し上げます。</span>
+                        </p>
                     </div>
                 </div>
 
@@ -206,11 +229,13 @@
                     <div class="pb-12 pt-2 flex-1">
                         <div class="bg-white p-6 rounded-xl border border-purple-200 shadow-xl shadow-purple-100/50 relative">
                             <div class="flex items-center gap-3 mb-3">
-                                <h4 class="text-xl font-bold text-purple-800">詳細のご案内（夜）</h4>
+                                <h4 class="text-xl font-bold text-purple-800">
+                                    <span class="word-keep">詳細のご案内</span><span class="word-keep">（夜）</span>
+                                </h4>
                                 <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full animate-pulse border border-purple-200">NOW</span>
                             </div>
                             <p class="text-slate-600 leading-relaxed">
-                                ご都合の良い時間に改めてお電話し、オファー内容の詳細や、具体的なサロン情報をお伝えします。
+                                <span class="word-keep">ご都合の良い時間に改めてお電話し、</span><span class="word-keep">オファー内容の詳細や、</span><span class="word-keep">具体的なサロン情報を</span><span class="word-keep">お伝えします。</span>
                             </p>
                             <div class="mt-4 flex items-center gap-2 text-purple-600 text-sm font-medium">
                                 <i data-lucide="phone" class="w-4 h-4"></i>
@@ -229,7 +254,7 @@
                     <div class="pb-10 pt-2 flex-1">
                         <h4 class="text-lg font-bold mb-2 text-slate-700">カジュアル面談</h4>
                         <p class="text-slate-500 text-sm mb-4">
-                            興味を持たれた場合のみ、サロン担当者とお話しいただきます。
+                            <span class="word-keep">興味を持たれた場合のみ、</span><span class="word-keep">サロン担当者と</span><span class="word-keep">お話しいただきます。</span>
                         </p>
                         <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                             <p class="text-xs text-slate-400 mb-2">選べる3つのスタイル</p>
@@ -255,14 +280,19 @@
                     </div>
                     <div class="pt-2">
                         <h4 class="text-lg font-bold mb-2 text-slate-700">オファー承諾・入社</h4>
-                        <p class="text-slate-500 text-sm">双方が合意した場合、新たなステージでのキャリアがスタートします。</p>
+                        <p class="text-slate-500 text-sm">
+                            <span class="word-keep">双方が合意した場合、</span><span class="word-keep">新たなステージでの</span><span class="word-keep">キャリアがスタートします。</span>
+                        </p>
                     </div>
                 </div>
             </div>
             
             <div class="mt-16 text-center">
                  <div class="inline-block bg-slate-50 border-2 border-slate-200 p-6 rounded-xl shadow-sm">
-                    <p class="text-base font-bold text-purple-700">※無理な勧誘は一切行いません。あくまで「選択肢の一つ」としてご検討ください。</p>
+                    <p class="text-base font-bold text-purple-700">
+                        <span class="word-keep">※無理な勧誘は一切行いません。</span><br class="md:hidden" />
+                        <span class="word-keep">あくまで「選択肢の一つ」として</span><span class="word-keep">ご検討ください。</span>
+                    </p>
                  </div>
             </div>
         </div>
